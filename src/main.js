@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
-import Hammer from 'hammerjs'
+import socket from 'lib/socket'
 
-import App from 'component/MainScene.jsx'
+import App from 'component/App.jsx'
 
 render(<App />, document.querySelector('#app'))
