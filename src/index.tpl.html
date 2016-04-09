@@ -5,9 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Silent Desko</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="http://localhost:5050/socket.io/socket.io.js"></script>
   </head>
   <body id="body">
     <div id="app"></div>
+    <script>
+      var socket = io('http://localhost:5050');
+      socket.on('notice', function (data) {
+        console.log(data)
+        socket.emit('chat', { message: 'lol' })
+      })
     </script>
   </body>
 </html>
